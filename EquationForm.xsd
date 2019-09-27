@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="EquationData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ACoefs"/>
+                <xs:element ref="XYPoints"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ACoefs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="ACoef"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ACoef">
+        <xs:complexType>
+            <xs:attribute name="Index" use="required" type="xs:integer"/>
+            <xs:attribute name="Value" use="required" type="xs:decimal"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="XYPoints">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="XYPoint"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="XYPoint">
+        <xs:complexType>
+            <xs:attribute name="Index" use="required" type="xs:integer"/>
+            <xs:attribute name="X" use="required" type="xs:decimal"/>
+            <xs:attribute name="Y" use="required" type="xs:decimal"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

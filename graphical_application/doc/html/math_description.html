@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mathematical description</title>
+</head>
+<body>
+	<h2>Documentation to EquationSolver Software</h2>
+	<ul><li><a href="index.html">Back to main menu</a></li></ul>
+	<h3>Mathematical description of the software</h3>
+
+	<div>
+		<h4>Equation representation</h4>
+		<p>User can represent equation <i>f(x) = g(x)</i> in two functions: 
+			</br<i>f(x)</i> - polynomial function and <i>g(x)</i> - function which
+			</br>can be calculated with the method of interpolation by Lagrange.
+		</p>
+	</div>
+	
+	<div>
+		<h4>Function f(x)</h4>
+		<p>In the software <i>f(x)</i> - is the polynomial of n-th power:</p>
+		<img src="..\img\polynomial_ex1.svg">
+		<p>is represented as the table of points with index and value of the coefficient.
+			In this way, user can add point </br>into the table with the field 
+			<i>A coef</i> and button <i>Add</i>
+		</p>
+		<img src="..\img\math_fx_description.png" height="327" width="475" alt="">
+	</div>
+	
+	<div>
+		<h4>Function g(x)</h4>
+		<p>Another function <i>g(x)</i> is represented by a set of points <i>(x, y)</i>
+		</br> which is used for method of interpolation by Lagrange:
+		</p>
+
+		<img src="../img/interpolation_ex1.svg" alt="">
+		<p>Where <i>lj is:</i></p>
+		<img src="../img/interpolation_ex2.svg" alt="">
+
+		<p>User can add a new point for the interpolation into the table with 
+			</br>a text fields <i>X point</i> and <i>Y point</i> and button <i>Add</i>
+		</p>
+
+		<img src="..\img\math_gx_description.png" height="327" width="475">
+	</div>
+
+	<div>
+		<h4>Solving process</h4>
+		<p>
+			When user entered data in <i>f(x)</i> and <i>g(x)</i> table and added the bounds 
+			<i>from to</i> EquationSolver solves the 
+			</br>equation on the interval that intersects user bounds and bounds of the 
+			function <i>g(x)</i> where this function is </br>defined. The solution proceded on the calculated interval with the usage of dichotomy method.
+		</p>
+	</div>
+</body>
+</html>
